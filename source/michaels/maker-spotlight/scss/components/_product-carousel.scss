@@ -1,0 +1,136 @@
+// Updated 01/11/2021
+
+.c-product-carousel {
+
+    .slick-container {
+    	width: 100%;
+        margin-top: 1vw;
+        padding: 1em 2em 0;
+        text-align: left;
+        line-height: 1.4;
+
+        p {
+            color:#000;
+
+            &.promo-price {
+                margin: 1em 0 0.5em;
+                font-size: 1.3em;
+                font-weight: 900;
+                letter-spacing: -0.0255em;
+                line-height: 1.1;
+                width: 100%;
+
+                .price-sale {
+                    margin-right: 0.3em;
+                    color: #C32032;
+                    white-space: nowrap;
+                }
+
+                .price-reg {
+
+                    &.on-sale {
+                        font-size: 0.7em;
+                        font-weight: 400;
+                        color: #888;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            &.promo-text {
+                margin: 0.75em 0;
+            }
+
+            &.promo-disclaimer {
+                margin: 1em 0;
+                font-size: 0.6em;
+            }
+        }
+
+        .img-container {
+            position: relative;
+            height: 0;
+            padding-bottom: 100%;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: initial;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+
+    .slick-slide {
+    	margin: 0 0.5em;
+        font-size: 0.9em;
+
+        a {
+            display: block;
+            font-size: inherit;
+        }
+
+    	@media only screen and (min-width:1101px){
+            margin: 0 0.75em;
+    	 }
+    }
+
+    .slick-arrow {
+        background: url("../img/carousel/promo-carousel-arrow.png") no-repeat transparent !important;
+        box-shadow: none;
+        cursor: pointer;
+        display: none;
+        height: 31px !important;
+        padding: 0 !important;
+        position: absolute;
+        text-indent: -9999px;
+        top: 50%;
+        width: 17px;
+        z-index: 900;
+
+        &.slick-prev {
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        &.slick-next {
+            right: 0;
+            transform: scaleX(-1) translateY(-50%);
+        }
+    }
+
+    .badge-great-buy,
+    .badge-edv,
+    .badge-edv-fr {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 25%;
+    }
+
+    .badge-great-buy {
+        background: url("../img/carousel/great-buy.png") top left/contain no-repeat;
+    }
+
+    .badge-edv {
+        background: url("../img/carousel/edv-lockup.png") top left/contain no-repeat;
+    }
+
+    .badge-edv-fr {
+        background: url("../img/carousel/edv-fr.png") top left/contain no-repeat;
+    }
+
+    .badge-shipping {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40%;
+        height: 40%;
+        background: url("../img/carousel/free-shipping.png") no-repeat;
+        background-size: contain;
+    }
+}

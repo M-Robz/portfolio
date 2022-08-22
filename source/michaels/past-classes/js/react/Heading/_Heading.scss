@@ -1,0 +1,11 @@
+// Variable dependencies:
+//   - `$medium-min`
+
+.c-Heading {
+    margin-bottom: 1rem;
+    font-weight: normal;
+
+    @media (min-width: $medium-min) {
+        margin-bottom: 0;
+    }
+}

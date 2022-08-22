@@ -1,0 +1,46 @@
+.c-featured-maker-snippet {
+    // background-color: #ee7064;
+    // color: #fff;
+    padding: 32px;
+    // background-color: red;
+    color: #000;
+    margin-bottom: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// .c-featured-maker-snippet:nth-child(even) {
+//     background-color: #fff;
+//     color: #000;
+// }
+
+.sect-featured-makers {
+    .maker-snippets {
+        .c-featured-maker-snippet {
+            padding: 24px 8px;
+        }
+    }
+}
+
+.page-makers-archive {
+
+    .c-featured-maker-snippet {
+        padding: 6px !important;
+        border: none;
+        color: #000;
+        position: relative;
+    }
+
+    .c-featured-maker-snippet:last-child {
+        border-bottom: 0;
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: $desktop-min) {
+
+    .page-makers-lp .c-featured-maker-snippet {
+        padding: 0;
+    }
+}

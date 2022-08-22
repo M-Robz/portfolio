@@ -1,0 +1,31 @@
+// Variable dependencies:
+//   - `$react-path`: Path to the project's React directory.
+
+.c-CustomSelect-Option {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    padding: 12px 0 9px 16px;
+    font-size: 16px;
+    color: #666;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &.is-selected {
+        color: #333;
+        background-color: #e8e8e8;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 13px;
+            right: 30px;
+            width: 22px;
+            height: 22px;
+            background: url($react-path + "CustomSelect/checkmark.png") no-repeat;
+            background-size: contain;
+        }
+    }
+}

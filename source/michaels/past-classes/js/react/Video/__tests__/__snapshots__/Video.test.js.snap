@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly once loaded 1`] = `
+<div
+  className="c-Video"
+>
+  <div
+    className="c-Video__video mel-c-video"
+  >
+    <div
+      className="mel-c-video__fluid"
+    >
+      <iframe
+        allowFullScreen={true}
+        className="mel-c-video__player mel-js-lazy"
+        data-src="https://www.youtube.com/embed/7bLxzojWrfA?rel=0&modestbranding=1"
+        height="232"
+        title="Video"
+        width="412"
+      />
+    </div>
+  </div>
+  <div
+    className="c-Video__text"
+  >
+    <h3
+      className="c-Video__heading"
+    >
+      3 Hour Throw Crochet with no tools!
+       | 
+      <span
+        className="c-Video__host"
+      >
+        Yarnspirations
+      </span>
+    </h3>
+    <p
+      className="c-Video__content"
+    >
+      6/20/2022
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders skeletons while loading 1`] = `
+<div
+  className="c-Video"
+>
+  <div
+    className="c-Video__video mel-c-video"
+  >
+    <div
+      className="mel-c-video__fluid"
+    >
+      <span
+        aria-busy={true}
+        aria-live="polite"
+      >
+        <span
+          className="react-loading-skeleton c-Video__skeleton"
+          style={Object {}}
+        >
+          ‌
+        </span>
+        <br />
+      </span>
+    </div>
+  </div>
+  <div
+    className="c-Video__text"
+  >
+    <h3
+      className="c-Video__heading"
+    >
+      <span
+        aria-busy={true}
+        aria-live="polite"
+      >
+        <span
+          className="react-loading-skeleton"
+          style={Object {}}
+        >
+          ‌
+        </span>
+        <br />
+        <span
+          className="react-loading-skeleton"
+          style={Object {}}
+        >
+          ‌
+        </span>
+        <br />
+        <span
+          className="react-loading-skeleton"
+          style={Object {}}
+        >
+          ‌
+        </span>
+        <br />
+      </span>
+    </h3>
+    <p
+      className="c-Video__content"
+    >
+      <span
+        aria-busy={true}
+        aria-live="polite"
+      >
+        <span
+          className="react-loading-skeleton"
+          style={
+            Object {
+              "width": "5em",
+            }
+          }
+        >
+          ‌
+        </span>
+        <br />
+      </span>
+    </p>
+  </div>
+</div>
+`;

@@ -1,0 +1,12 @@
+// Dependencies
+//   - Mixins: `set-aspect-ratio-container`, `set-aspect-ratio-before`
+
+.c-banner {
+    @include set-aspect-ratio-container(1280, 315);
+
+    @media (max-width: 480px) {
+        // Most category-specific banners have a 480x550 aspect ratio, but the
+        // generic banner that's currently in use is 325x438
+        @include set-aspect-ratio-before(325, 438);
+    }
+}

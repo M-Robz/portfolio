@@ -1,0 +1,10 @@
+// Variable dependencies:
+//   - `$medium-min`
+
+.c-VideoList {
+
+    @media (min-width: $medium-min) {
+        margin-right: -0.5rem;
+        margin-left: -0.5rem;
+    }
+}

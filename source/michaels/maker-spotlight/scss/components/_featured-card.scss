@@ -1,0 +1,179 @@
+.c-featured-card {
+    background: #fff;
+    color: #000;
+}
+
+.c-featured-card__portrait {
+    padding: 24px 24px 0;
+    img {
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.c-featured-card__copy {
+    padding: 24px;
+    p {
+        margin: 8px 0 !important;
+    }
+}
+
+.c-featured-card__name {
+    margin: 0;
+    @include circular-bold;
+}
+
+.c-featured-card__handle {
+    margin: 0;
+    a {
+        font-size: 1em;
+        @include circular-bold;
+    }
+}
+
+.c-featured-card__labels {
+    margin-top: 0;
+}
+
+.c-featured-card__link {
+    a {
+        text-decoration: underline;
+        font-size: 18px;
+        @include circular-bold;
+    }
+}
+
+.sect-featured-makers {
+    .c-featured-card {
+        display: block;
+    }
+}
+
+.c-profile-modal__body {
+    .c-featured-card{
+        padding: 24px 0;
+        text-align: center;
+    }
+    .c-featured-card__copy {
+        font-size: 1.1em;
+        text-align: center;
+        .mel-button {
+            margin: 8px 0;
+        }
+    }
+}
+
+.page-makers-lp {
+    .c-featured-card {
+        max-width: 329px;
+        margin: auto;
+    }
+    .c-featured-card__copy {
+        text-align: left;
+    }
+}
+
+.page-makers-archive {
+    .c-featured-card {
+        text-align: center;
+        display: block;
+    }
+    .c-featured-card__portrait {
+        padding: 0;
+        overflow: hidden;
+    }
+    .c-featured-card__copy {
+        padding-bottom: 55px;
+        display: flex;
+        flex-direction: column;
+        p {
+            margin: 8px 0;
+        }
+    }
+    .c-featured-card__link {
+        position: absolute;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: $desktop-min) {
+
+    .c-featured-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .c-featured-card__portrait {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+
+    .sect-featured-makers {
+        .c-featured-card {
+            display: flex;
+        }
+    }
+
+    // .c-featured-maker-snippet:nth-child(even) {
+    //     .c-featured-card {
+    //         flex-direction: row-reverse;
+    //         img {
+    //             margin-right: auto;
+    //             margin-left: auto;
+    //         }
+    //     }
+    // }
+    .page-makers-lp {
+        .c-featured-card {
+            justify-content: flex-start;
+            max-width: none;
+            background: none;
+        }
+        .c-featured-card__portrait {
+            justify-content: center;
+            padding: 0;
+            img {
+                width: auto;
+                max-width: none;
+                height: 20em;
+                // min-height: 100%; // Problem: may make widths inconsistent between makers, depending on copy length
+                margin: 0;
+            }
+        }
+        .c-featured-card__copy {
+            max-width: 42em;
+            margin: 2em;
+            padding: 2em;
+            background: #fff;
+        }
+    }
+    .page-makers-archive {
+        .c-featured-card {
+            flex-direction: column !important;
+        }
+        .c-featured-card__portrait {
+            display: block;
+        }
+    }
+    .c-profile-modal__body {
+        .c-featured-card{
+            padding: 24px 0 0;
+            text-align: left;
+        }
+        .c-featured-card__portrait {
+            max-width: 330px;
+        }
+        .c-featured-card__copy {
+            max-width: 500px;
+            text-align: left;
+        }
+    }
+}

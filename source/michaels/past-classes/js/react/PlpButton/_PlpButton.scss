@@ -1,0 +1,22 @@
+.c-PlpButton {
+    display: inline-block;
+    position: relative;
+    padding: 2px 14px;
+    line-height: 23px;
+    color: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+
+    // Defense
+    height: auto !important;
+    font-family: Montserrat, Arial, sans-serif;
+    box-shadow: none;
+    background: none;
+
+    &.is-disabled {
+        color: #d5d5d5;
+        background-color: #f1f1f1;
+        pointer-events: none;
+    }
+}

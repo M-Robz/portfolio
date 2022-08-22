@@ -1,0 +1,40 @@
+.sect-intro .mel-c-video {
+    max-width: none;
+}
+
+.page-makers-archive {
+    .sect-intro {
+        padding: 32px 0;
+        h1,
+        h2 {
+            font-size: 2.5em;
+            font-style: normal; // Overrides `clp-desktop.css`, `clp-mobile.css`
+            color: $mik-red;
+            @include circular-bold;
+        }
+        h1 + p,
+        h2 + p {
+            width: 80%;
+            margin: 1em auto;
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: $desktop-min) {
+
+    .page-makers-archive {
+        .sect-intro {
+            h1,
+            h2 {
+                font-size: 4em;
+            }
+            h1 + p,
+            h2 + p {
+                width: 67%;
+                margin: 1.5em auto;
+            }
+        }
+    }
+
+}

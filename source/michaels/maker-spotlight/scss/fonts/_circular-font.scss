@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Circular-Book";
+    src: url('../fonts/circular-font/CircularXXWeb-Book.woff');
+}
+
+@font-face {
+    font-family: "Circular-Bold";
+    src: url('../fonts/circular-font/CircularXXWeb-Bold.woff');
+}
+
+$circular-book: "Circular-Book";
+$circular-bold: "Circular-Bold";
+
+//  Use globally on your project
+
+@mixin circular-book-font {
+    .mel,
+    h1,h2,h3,h4,h5,h6,
+    p,a {
+        font-family: $circular-book;
+    }
+}
+
+@mixin circular-bold-font {
+    .mel,
+    h1,h2,h3,h4,h5,h6,
+    p,a {
+        font-family: $circular-bold;
+    }
+}
+
+// Use as an individual style
+
+@mixin circular-book {
+    font-family: $circular-book !important;
+}
+
+@mixin circular-bold {
+    font-family: $circular-bold !important;
+}
+

@@ -1,0 +1,26 @@
+.page-makers-archive {
+
+    .c-tab {
+        padding: 16px 24px;
+        font-size: 1em;
+        display: inline-block;
+        border-radius: 25px;
+        @include circular-bold;
+    }
+
+    .c-tab.tabIsActive {
+        background-color: $mik-red;
+        color: #fff;
+        text-transform: uppercase;
+        @include circular-bold;
+    }
+
+    .c-tab {
+        background-color:#f7f7f7;
+        text-transform: uppercase;
+    }
+
+    .tabIsHidden {
+        display: none;
+    }
+}

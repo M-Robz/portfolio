@@ -1,0 +1,56 @@
+.sect-featured-makers {
+    h1,
+    h2 {
+        font-size: 2.5em;
+        font-style: normal; // Overrides `clp-desktop.css`, `clp-mobile.css`
+        color: $mik-red;
+        @include circular-bold;
+    }
+
+    h1 + p,
+    h2 + p {
+        width: 80%;
+        margin: 1.5em auto;
+    }
+
+    p {
+        font-size: 19px;
+    }
+}
+
+.page-makers-lp {
+
+    .sect-featured-makers {
+        margin-bottom: 2em;
+
+        .mel-button {
+            margin-right: 1em;
+            margin-left: 1em;
+        }
+    }
+}
+
+.page-makers-archive {
+
+    .sect-featured-makers {
+        padding: 0 1vw;
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: $desktop-min) {
+
+    .sect-featured-makers {
+        h1,
+        h2 {
+            font-size: 4em;
+        }
+        h1 + p,
+        h2 + p {
+            width: 60%;
+        }
+    }
+}

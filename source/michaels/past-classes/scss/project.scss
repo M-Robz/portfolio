@@ -1,0 +1,42 @@
+// PROJECT PATH VARIABLE
+$project-path: "../";
+$react-path: $project-path + "js/react/";
+
+// PUBLIC IMPORTS
+@import "../../../node_modules/react-loading-skeleton/dist/skeleton.css";
+
+// PROJECT IMPORTS
+@import "variables";
+@import "helpers";
+@import "mixins/aspect-ratio";
+@import "icons/AngleIcon/AngleIcon";
+@import "CustomSelect/CustomSelect";
+@import "CustomSelect/Menu";
+@import "CustomSelect/Option";
+@import "GraphicBanner/GraphicBanner";
+@import "Heading/Heading";
+@import "Modal/Modal";
+@import "Pagination/Pagination";
+@import "Pagination/SelectPage";
+@import "Pencil/Pencil";
+@import "PlpButton/PlpButton";
+@import "SelectMenu/SelectMenu";
+@import "TitleBar/TitleBar";
+@import "Video/Video";
+@import "VideoList/VideoList";
+
+// PROJECT STYLES
+.page-past-classes {
+    padding: 0 0.5rem;
+    font-size: 14px;
+    text-align: center;
+
+    @media (min-width: $medium-min) {
+        padding: 0 1rem;
+        font-size: 16px;
+    }
+
+    .mel-button--round {
+        border-radius: 25px;
+    }
+}

@@ -1,0 +1,51 @@
+$products-heading-width: 135px;
+$products-heading-margin: 6%;
+
+.c-featured-products {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-featured-products__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em auto 0.5em;
+
+    &.c-profile-modal__heading {
+        padding: 0;
+    }
+}
+
+.c-featured-products__heading::before {
+    content: "";
+    display: block;
+    width: 90px;
+    height: round(102 / 112 * 90px); // image's intrinsic ratio * width
+    margin: 0 auto 0.4em;
+    background: url("../img/supplies.png") center/contain no-repeat;
+}
+
+@media (min-width: $desktop-min) {
+
+    .c-featured-products {
+        padding: 64px 32px;
+    }
+
+    .c-featured-products {
+        flex-direction: row;
+    }
+
+    .c-featured-products__heading {
+        width: $products-heading-width;
+        margin: 0 $products-heading-margin 0;
+    }
+
+    .c-featured-products__heading::before {
+        margin: 0 auto 0.4em 0.5em;
+    }
+
+    .c-product-carousel {
+        width: calc(100% - #{$products-heading-width} - #{2 * $products-heading-margin});
+    }
+}

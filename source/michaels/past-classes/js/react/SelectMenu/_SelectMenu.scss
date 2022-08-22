@@ -1,0 +1,43 @@
+// Variable dependencies:
+//   - `$medium-min`
+
+.c-SelectMenu__label {
+    padding-right: 0.8em;
+    font-size: 0.9em;
+}
+
+.c-SelectMenu__dropdown-wrapper {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 8px;
+        height: 8px;
+        border-width: 0 0 2px 2px;
+        border-style: solid;
+        border-color: #333;
+        transform: translateY(-50%) rotate(-45deg);
+        transform-origin: left;
+        pointer-events: none;
+    }
+}
+
+.c-SelectMenu__dropdown {
+    appearance: none;
+    height: auto;
+    padding: 1em 40px 1em 1em;
+    font-size: 0.9em !important;
+    line-height: 1;
+    color: #777;
+    background: #fff;
+    border: 1px solid #777;
+    border-radius: 0;
+
+    @media (min-width: $medium-min) {
+        font-size: 0.8em !important;
+    }
+}

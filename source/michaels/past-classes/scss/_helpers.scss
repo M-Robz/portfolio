@@ -1,0 +1,13 @@
+.u-mb-1r { margin-bottom: 1rem }
+.u-mb-2r { margin-bottom: 2rem }
+.u-mlr-1r { margin-right: 1rem; margin-left: 1rem }
+.u-mlr-0-5r { margin-right: 0.5rem; margin-left: 0.5rem }
+
+@media (min-width: $medium-min) {
+    .u-med-mb-1r { margin-bottom: 1rem }
+    .u-med-mb-2r { margin-bottom: 2rem }
+    .u-med-mlr-1r { margin-right: 1rem; margin-left: 1rem }
+    .u-med-mlr-0-5r { margin-right: 0.5rem; margin-left: 0.5rem }
+}
+
+.u-outline { outline: 1px solid #e1e1e1; outline-offset: -1px }

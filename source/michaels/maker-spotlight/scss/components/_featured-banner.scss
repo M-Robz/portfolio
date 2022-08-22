@@ -1,0 +1,31 @@
+.c-featured-banner {
+    text-align: center;
+    position: relative;
+}
+
+.c-profile-modal {
+    .c-featured-banner__quote {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        font-weight: bold;
+        margin: 0;
+        padding: 30px;
+        font-size: 1.5em;
+    }
+
+    @media (min-width: $desktop-min) {
+
+        .c-featured-banner__quote {
+            width: auto !important;
+            position: absolute;
+            right: 50%;
+            bottom: 50%;
+            transform: translate(50%, 50%);
+        }
+        .c-featured-banner__img {
+            img {
+                min-height: auto;
+            }
+        }
+    }
+}

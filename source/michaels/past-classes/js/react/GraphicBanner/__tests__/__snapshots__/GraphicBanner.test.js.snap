@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with all props 1`] = `
+<div
+  className="c-banner u-mb-1r u-outline"
+>
+  <a
+    className="c-banner__link"
+    href="test/link"
+  >
+    <picture>
+      <source
+        media="(max-width: 480px)"
+        srcSet="mobile-image.jpg"
+      />
+      <img
+        alt=""
+        className="c-banner__img"
+        src="desktop-image.jpg"
+      />
+    </picture>
+    <div
+      className="c-banner__copy sr-only"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<h2>Lorem ipsum</h2>",
+        }
+      }
+    />
+  </a>
+</div>
+`;
+
+exports[`renders correctly with only required props 1`] = `
+<div
+  className="c-banner u-mb-1r"
+>
+  <picture>
+    <source
+      media="(max-width: 480px)"
+      srcSet="mobile-image.jpg"
+    />
+    <img
+      alt=""
+      className="c-banner__img"
+      src="desktop-image.jpg"
+    />
+  </picture>
+  <div
+    className="c-banner__copy sr-only"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<h2>Lorem ipsum</h2>",
+      }
+    }
+  />
+</div>
+`;

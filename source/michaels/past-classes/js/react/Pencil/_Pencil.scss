@@ -1,0 +1,14 @@
+// Dependencies
+//   - Mixins: `set-aspect-ratio-container`, `set-aspect-ratio-before`
+
+.c-pencil {
+    @include set-aspect-ratio-container(1280, 115);
+
+    @media (max-width: 800px) {
+        @include set-aspect-ratio-before(800, 115);
+    }
+
+    @media (max-width: 480px) {
+        @include set-aspect-ratio-before(480, 115);
+    }
+}

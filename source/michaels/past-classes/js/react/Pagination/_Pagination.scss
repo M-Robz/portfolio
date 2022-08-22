@@ -1,0 +1,55 @@
+.c-Pagination {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+    font-size: 14px;
+
+    // Defense
+    width: auto;
+    height: auto;
+
+    > * {
+        margin: 0.5rem;
+    }
+}
+
+.c-Pagination__prev-button {
+    color: #666;
+
+    .c-AngleIcon--left {
+
+        @media (min-width: $small-min) {
+            margin-right: 0.5em;
+        }
+    }
+
+    &:not(.is-disabled) .c-AngleIcon--left {
+        border-color: #cf181f;
+    }
+}
+
+.c-Pagination__next-button {
+    color: #666;
+
+    .c-AngleIcon--right {
+
+        @media (min-width: $small-min) {
+            margin-left: 0.5em;
+        }
+    }
+
+    &:not(.is-disabled) .c-AngleIcon--right {
+        border-color: #cf181f;
+    }
+}
+
+.c-Pagination__button-text {
+
+    // Defense
+    padding: 0;
+    background: none;
+
+    @media (max-width: $xs-max) {
+        display: none;
+    }
+}

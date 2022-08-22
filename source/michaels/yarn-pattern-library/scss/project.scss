@@ -1,0 +1,73 @@
+// PROJECT PATH VARIABLE
+$project-path: "/dotcom/PROJECT_yarn-pattern-library_CATLP/img/";
+
+// PROJECT IMPORTS
+@import "variables";
+@import "helpers";
+@import "mixins/visibility";
+@import "components/filter-menu";
+@import "components/heading";
+@import "components/loader";
+@import "components/pattern-card";
+
+// PROJECT STYLES
+.page-ypl {
+    font-size: 14px;
+    color: $default-color;
+
+    @media (min-width: $medium-min) {
+        font-size: 16px;
+    }
+
+    .sect-intro {
+
+        p {
+            max-width: 900px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    .sect-all {
+
+        @media (min-width: $medium-min) {
+            display: flex;
+        }
+    }
+
+    .sidebar {
+
+        @media (min-width: $medium-min) {
+            flex: 0 0 auto;
+            padding: 1vw 2rem 0 0;
+        }
+
+        .mik-qu & {
+
+            // These rules are to keep the filter options from overflowing their
+            // container. They may need to be adjusted if the options change.
+            @media (min-width: $medium-min) {
+                max-width: 28%;
+            }
+            @media (min-width: $large-min) {
+                max-width: 25%;
+            }
+        }
+    }
+
+    .designs {
+
+        @media (min-width: $medium-min) {
+            flex: 1 1 100%; // IE bugfix: 100% instead of auto
+        }
+    }
+
+    .sect-supporting {
+        text-align: left;
+
+        small {
+            display: block;
+            font-size: 0.75em;
+        }
+    }
+}

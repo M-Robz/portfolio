@@ -1,0 +1,57 @@
+.c-pattern-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1vw;
+    padding: 2% 2% 1rem;
+    border: 1px solid #bbb;
+
+    @media (min-width: $medium-min) {
+        padding: 1rem;
+    }
+}
+
+.c-pattern-card__figure {
+    flex: 0 0 auto;
+    margin-bottom: 1rem;
+}
+
+.c-pattern-card__body {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.c-pattern-card__copy {
+    margin-bottom: 0.5rem;
+
+    > * {
+        margin: 0 0 0.5rem;
+        line-height: 1.2;
+    }
+}
+
+.c-pattern-card__heading {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.c-pattern-card__subhead {
+    font-size: 0.95em;
+}
+
+.c-pattern-card__cta {
+    align-self: flex-start;
+    margin-bottom: 0;
+    background-color: $flush-mahogany;
+
+    .mik-qu & {
+        // Reduce padding on QUE to avoid soft line break
+        padding: 0.45em 0.7em;
+    }
+
+    &:hover, &:focus {
+        background-color: adjust-color($flush-mahogany, $lightness: -7%);
+    }
+}

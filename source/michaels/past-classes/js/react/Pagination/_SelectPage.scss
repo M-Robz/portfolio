@@ -1,0 +1,14 @@
+.c-Pagination-SelectPage {
+
+    .c-AngleIcon--down {
+        margin-left: 0.8em;
+    }
+}
+
+.c-Pagination-SelectPage__text {
+    margin-left: 0.5em;
+
+    &.is-disabled {
+        color: #d5d5d5;
+    }
+}

@@ -1,0 +1,38 @@
+@import "../fonts/circular-font";
+
+$modal-titlebar-height: 45px;
+
+.c-profile-modal {
+    height: calc(100vh - #{$modal-titlebar-height}) !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    p {
+        font-size: 1em; // Overrides `clp-desktop.css`, `clp-mobile.css`
+    }
+
+    &__body {
+        @include circular-book-font;
+        max-width: 1280px;
+        margin: auto;
+    }
+    &__heading {
+        padding: 1em;
+        font-size: 2em;
+        line-height: 1;
+        color: $mik-red;
+        @include circular-bold;
+        text-align: center;
+    }
+
+    //////////////////
+    // Desktop Styles
+    /////////////////
+
+    @media (min-width: $desktop-min){
+        &__heading {
+            text-align: left;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+// PROJECT PATH VARIABLE
+$project-path: "/dotcom/PROJECT_maker-spotlight_CATLP/img/";
+
+// PROJECT IMPORTS
+@import "variables";
+@import "mixins/center-vertically";
+@import "mixins/close-icon";
+@import "fonts/circular-font";
+
+// Modular components
+@import "components/loader";
+@import "components/product-carousel";
+@import "components/mel-video";
+
+// Project components and sections
+@import "components/featured-banner";
+@import "components/featured-card";
+@import "components/featured-products";
+@import "components/featured-items";
+@import "components/featured-maker-snippet";
+@import "components/micro-maker-snippet";
+@import "components/profile-modal";
+@import "components/video-modal";
+@import "components/tab";
+@import "sections/intro";
+@import "sections/featured-makers";
+@import "sections/micro-makers";
+
+// PROJECT STYLES
+.maker-spotlight,
+.c-profile-modal {
+    @include circular-book-font;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+
+    a {
+        font-weight: inherit;
+        text-transform: none;
+    }
+
+    .mel-button {
+        border-radius: 35px;
+        text-transform: uppercase;
+    }
+
+    .mel-c-micro-maker-card {
+
+        a {
+            @include circular-bold;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+// Source: mel v2.11.0
+
+//
+// Hide from both screenreaders and browsers: h5bp.com/u
+//
+@mixin hidden {
+    display: none !important;/* stylelint-disable-line declaration-no-important */
+    visibility: hidden;
+}
+
+//
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+//
+@mixin sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+//
+// Extends the .sr-only class to allow the element to be focusable
+// when navigated to via the keyboard: h5bp.com/p
+//
+@mixin sr-only-focusable {
+    &:active,
+    &:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+//
+// Hide visually and from screenreaders, but maintain layout
+//
+@mixin invisible {
+    visibility: hidden;
+}

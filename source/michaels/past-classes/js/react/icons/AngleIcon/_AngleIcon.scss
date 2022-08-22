@@ -1,0 +1,30 @@
+.c-AngleIcon {
+    display: inline-block;
+    position: relative;
+    padding: 0.18em;
+    vertical-align: middle;
+    border-width: 0 0.15em 0.15em 0;
+    border-style: solid;
+    border-color: currentColor;
+    transform-origin: center;
+}
+
+.c-AngleIcon--up {
+    top: 0;
+    transform: rotate(-135deg);
+}
+
+.c-AngleIcon--right {
+    top: -0.1em;
+    transform: rotate(-45deg);
+}
+
+.c-AngleIcon--down {
+    top: -0.2em;
+    transform: rotate(45deg);
+}
+
+.c-AngleIcon--left {
+    top: -0.1em;
+    transform: rotate(135deg);
+}

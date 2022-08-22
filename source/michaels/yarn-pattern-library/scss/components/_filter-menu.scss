@@ -1,0 +1,94 @@
+.c-filter-menu {
+
+    @media (min-width: $medium-min) {
+        text-align: left;
+    }
+
+    fieldset {
+        padding: 0;
+    }
+}
+
+.c-filter-menu__title {
+    // Firefox/IE bugfix: center via margin instead of text-align
+    margin: 0 auto 0.5rem;
+    font-size: 1.5em;
+    font-weight: bold;
+
+    @media (min-width: $medium-min) {
+        margin: 0 0 1rem;
+    }
+}
+
+.c-filter-menu__options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: $medium-min) {
+        display: block;
+    }
+}
+
+.c-filter-menu__option {
+    position: relative;
+    margin: 0 0.3rem 0.6rem;
+
+    @media (min-width: $medium-min) {
+        margin: 0 0 0.7rem;
+    }
+
+    input {
+        @include sr-only;
+    }
+
+    label {
+        display: block;
+        padding: 0.5em 1em;
+        font-size: 1em;
+        line-height: 1.2;
+        color: lighten($default-color, 15%);
+        border: 1px solid #bbb;
+        transition: background 100ms;
+        cursor: pointer;
+
+        @media (min-width: $medium-min) {
+            padding: 0;
+            font-size: 1.2em;
+            border: none;
+        }
+    }
+
+    input:focus + label {
+        // Color contrast ratio should be at least 3:1
+        outline: 2px dotted adjust-color($flush-mahogany, $lightness: -7%);
+        outline-offset: 2px;
+    }
+
+    input:focus:not(:focus-visible) + label {
+        // Don't show outline on mouse-focus if `:focus-visible` is supported
+        outline: none;
+    }
+
+    input:checked + label {
+        color: #fff;
+        background: #666;
+
+        @media (min-width: $medium-min) {
+            font-weight: bold;
+            color: $default-color;
+            background: none;
+        }
+    }
+
+    input:disabled {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    input:disabled + label {
+        opacity: 0.3;
+        pointer-events: none;
+        cursor: default;
+    }
+}

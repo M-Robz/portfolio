@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with all props 1`] = `
+<div
+  className="c-pencil u-outline"
+>
+  <a
+    className="c-pencil__link"
+    href="test/link"
+  >
+    <picture>
+      <source
+        media="(max-width: 480px)"
+        srcSet="mobile-image.jpg"
+      />
+      <source
+        media="(max-width: 800px)"
+        srcSet="tablet-image.jpg"
+      />
+      <img
+        alt="Alt text"
+        className="c-pencil__img"
+        src="desktop-image.jpg"
+      />
+    </picture>
+  </a>
+</div>
+`;
+
+exports[`renders correctly with only required props 1`] = `
+<div
+  className="c-pencil"
+>
+  <picture>
+    <img
+      alt="Alt text"
+      className="c-pencil__img"
+      src="desktop-image.jpg"
+    />
+  </picture>
+</div>
+`;
