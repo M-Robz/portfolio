@@ -1,0 +1,43 @@
+// ==== TEMPLATE VARIABLES ====
+// These should not normally need to be modified
+
+// BREAKPOINTS
+$xs-min: 320px;
+$xs-max: 424px;
+$small-min: 425px;
+$small-max: 767px;
+$medium-min: 768px;
+$medium-max: 1023px;
+$large-min: 1024px;
+$large-max: 1279px;
+$xl-min: 1280px;
+
+// MEL BREAKPOINTS
+$mel-small: 480px;
+$mel-medium: 801px;
+$mel-large: 1024px;
+$mel-x-large: 1280px;
+
+// LAYOUT
+$max-content-width: 1280px;
+$string-gutter: 1vw;
+$carousel-arrow-width: 2em;
+
+
+// ==== CONFIGURATION OPTIONS ====
+// Modify these to customize the current page
+
+// --- COLOR HEX VALUES ---
+$mik-red: #d30e2c;
+
+// --- COLOR SCHEME ---
+
+// General
+$heading-font-color: #fff;
+$heading-bg-color: none;
+$nav-font-color: #fff;
+$disclaimer-font-color: #fff;
+$carousel-arrow-color: #fff;
+
+// Offer blocks
+$offer-bg-color: #fff;

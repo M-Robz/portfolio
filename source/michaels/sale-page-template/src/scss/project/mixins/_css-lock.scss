@@ -1,0 +1,7 @@
+@mixin css-lock($property, $smallest-value, $largest-value, $smallest-breakpoint, $largest-breakpoint) {
+
+    $slope: ($largest-value - $smallest-value) / ($largest-breakpoint - $smallest-breakpoint);
+    $b: $smallest-value - $slope * $smallest-breakpoint;
+
+    #{$property}: calc(#{$slope} * 100vw + #{$b});
+}

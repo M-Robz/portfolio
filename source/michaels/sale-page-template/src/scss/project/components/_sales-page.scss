@@ -1,0 +1,165 @@
+/* --- SALES TEMPLATE --- */
+section {
+    margin-bottom: 2em;
+}
+a {
+    margin-right: 0; // Overrides responsive.css
+    font-size: inherit; // Overrides responsive.css
+}
+.outlined {
+    outline: 1px solid #f0f0f0;
+    outline-offset: -1px;
+}
+.margin-align-carousel {
+    // Align margins when offers are in carousels
+    margin-left: calc(#{$carousel-arrow-width} + #{$string-gutter / 2});
+    margin-right: calc(#{$carousel-arrow-width} + #{$string-gutter / 2});
+}
+.margin-align-strings {
+    // Align margins when offers use mel-string for layout
+    margin-top: $string-gutter;
+    margin-right: $string-gutter;
+    margin-left: $string-gutter;
+
+    @media (min-width: ($max-content-width + 30px)) {
+        // This aligns outside edges with full-width banners on large screens.
+        // Add 30px to breakpoint to account for browser's scrollbar
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+.sale-heading {
+    color: $heading-font-color;
+
+    &--has-bg {
+        padding: 0.5em;
+        background: $heading-bg-color;
+    }
+}
+.sale-nav-menu {
+    margin: 0 3% 2em;
+    color: $nav-font-color;
+    overflow-wrap: break-word;
+
+    // Defense against global CLP styles for nav elements
+    position: static;
+    height: auto;
+    width: auto;
+    min-width: 0;
+
+    .mel-string .mel-o-media-stack {
+        // Bugfix: Restore mel-string margin
+        margin-right: 0.5vw;
+    }
+
+    .mel-o-media-stack__figure {
+        max-width: 90%;
+
+        // IE bugfix: whitespace beneath image
+        flex-shrink: 0;
+    }
+
+    .mel-o-media-stack__body {
+        padding: 0 5%;
+        font-size: 0.75em;
+    }
+}
+.mel-string .promo-block {
+    margin-bottom: $string-gutter;
+}
+.offers {
+    margin: 0;
+
+    &:not(.offers--carousel) {
+        padding: $string-gutter / 2;
+
+        @media (min-width: ($max-content-width + 30px)) {
+            // This aligns outside edges of grid with full-width
+            // banners/headings on large screens. Add 30px to breakpoint to
+            // account for browser's scrollbar
+            margin-left: -$string-gutter;
+            margin-right: -$string-gutter;
+        }
+    }
+}
+.mel-c-sale-card {
+    margin-top: $string-gutter / 2;
+    margin-bottom: $string-gutter / 2;
+}
+.disclaimers {
+    margin: 0 2rem 2rem;
+    color: $disclaimer-font-color;
+    font-size: 0.7em;
+    text-align: left;
+
+    ul {
+        margin-left: 2em;
+    }
+
+    li {
+        list-style-type: disc;
+    }
+
+    sup {
+        top: -0.3em;
+    }
+
+    a {
+        display: inline;
+        text-decoration: underline;
+    }
+}
+
+/* --- CAROUSEL --- */
+.offers--carousel {
+    padding: 0 $carousel-arrow-width;
+
+    .slick-slide {
+        margin-right: $string-gutter / 2;
+        margin-left: $string-gutter / 2;
+    }
+
+    .slick-arrow:hover {
+        // Defense against IT styles
+        background: none;
+    }
+
+    .carousel-arrow-next,
+    .carousel-arrow-prev {
+        @include center-vertically(absolute);
+        width: $carousel-arrow-width;
+        height: $carousel-arrow-width;
+        padding: 0;
+        box-shadow: none;
+
+        &:focus {
+            outline: none;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            stroke: $carousel-arrow-color;
+        }
+    }
+
+    .carousel-arrow-prev {
+        left: 0;
+    }
+
+    .carousel-arrow-next {
+        right: 0;
+    }
+
+    .mel-c-carousel__item {
+        padding: 0;
+    }
+
+    // Give slide contents 100% height (use in conjunction with the
+    // `slickEqualHeight` JS module)
+    .slick-slide > div,
+    .mel-c-carousel__item,
+    .mel-c-carousel__item > * {
+        height: 100%;
+    }
+}

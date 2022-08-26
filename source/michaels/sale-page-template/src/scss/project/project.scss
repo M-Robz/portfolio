@@ -1,0 +1,82 @@
+// PROJECT PATH VARIABLE
+$project-path: "/dotcom/PROJECT_my-project_CATLP/img/";
+
+// PROJECT IMPORTS
+@import "variables";
+@import "mixins/center-vertically";
+@import "mixins/css-lock";
+
+// PROJECT STYLES
+.my-project {
+
+    // Sales template
+    @import "components/sales-page";
+
+    /* --- CUSTOM STYLES --- */
+    /* Non-templated styles specific to the current project */
+    .banner {
+        margin: 0 0 3rem;
+
+        @media (min-width: $xl-min) {
+            margin: 3rem 0;
+        }
+
+        img {
+            width: auto;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+    .banner.evergreen {
+        padding: 5%;
+        color: #fff;
+
+        @media (max-width: $xs-max) {
+            padding: 7%;
+        }
+
+        a {
+            display: inline; // Overrides responsive.css
+            text-decoration: underline;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+
+        .banner__headline {
+            margin: 0 3% 5%;
+
+            &--text {
+                margin: 0 0 4%;
+                line-height: 1.1;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                @include css-lock(font-size, 30px, 128px, $xs-min, $large-max);
+                @media (min-width: $xl-min) { font-size: 128px; }
+            }
+        }
+
+        .banner__subhead {
+            line-height: 1.4;
+            text-transform: uppercase;
+
+            @include css-lock(font-size, 18px, 26px, $xs-min, $large-max);
+            @media (min-width: $xl-min) { font-size: 26px; }
+        }
+    }
+
+    .mel-c-sale-card__bug-overlay.bug-Great-Buy {
+        right: 5px;
+        bottom: 5px;
+        width: 20%;
+        min-width: 30px;
+    }
+
+    .mel-c-sale-card__bug-overlay.bug-EDV,
+    .mel-c-sale-card__bug-overlay.bug-EDV-FR {
+        min-width: 45px;
+    }
+}
